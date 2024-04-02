@@ -16,11 +16,12 @@
     <div class="container"><button onclick="calcularArea('retangulo')">Retângulo</button></div>
     <div class="container"><button onclick="calcularArea('circulo')">Círculo</button></div>
     <div class="container"><button onclick="calcularArea('quadrado')">Quadrado</button></div>
+    <div class="container"><button onclick="calcularArea('cubo')">Cubo</button></div>
 </div>
 
-<section id="modify">
-    <img src="form.gif" alt="color">
-</section>
+    <section id="modify">
+        <img src="form.gif" alt="color">
+    </section>
 
 <div id="resultado"></div>
 
@@ -50,7 +51,7 @@
             var largura = parseFloat(prompt("Digite o valor da largura do retângulo:"));
             var areaRetangulo = comprimento * largura;
             resultadoDiv.innerHTML = "Área do retângulo: " + areaRetangulo.toFixed(2);
-            break;
+            break;   
 
         case "circulo":
             var raio = parseFloat(prompt("Digite o valor do raio do círculo:"));
@@ -64,6 +65,14 @@
             resultadoDiv.innerHTML = "Área do quadrado: " + areaQuadrado.toFixed(2);
             break;
 
+            case "cubo":
+                var base = parseFloat(prompt("Digite a base:" + base));
+                var altura = parseFloat(prompt("Digite a altura:" + altura)); 
+                var comprimento = parseFloat(prompt("Digite o comprimento:" + comprimento));
+                var Volume = base*altura*comprimento/1000 
+                resultadoDiv.innerHTML = "Volume do cubo: " + Volume.toFixed(2);
+                break;
+                
         default:
             resultadoDiv.innerHTML = "Forma inválida!";
     }
